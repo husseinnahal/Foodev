@@ -1,0 +1,1549 @@
+.item{
+
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0 50px 0;
+    flex-wrap: wrap;
+
+    .information{
+
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        color: var(--red);
+        width: 650px;
+        letter-spacing: 1px;
+
+        .name{
+            font-size: 40px;
+        }
+        .desc{
+            width: 90%;
+            color: var(--orange);
+        }
+        .order{
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+              .quantity{
+                display: flex;
+                gap: 10px;
+                font-size: 30px;
+                align-items: center;
+                .plus{
+                  cursor: pointer;
+                  font-size: 35px;
+                }
+    
+              }
+            .price{ 
+                font-size: 28px;
+                color: var(--red);
+                background: var(--orange);
+                padding: 10px;
+                text-align: center;
+                border-radius: 21px;
+            }
+
+          }
+          .addToCart{
+              text-decoration: none;
+              color: var(--orange);
+              border: 2px solid var(--orange);
+              padding:  10px 25px;
+              border-radius:10px ;
+              transition: 0.5s;
+              width: 250px;
+              text-align: center;
+          }
+          .addToCart:hover{
+            color: var(--red);
+            border: 2px solid var(--red);
+          }
+    }
+
+
+}
+
+
+.withoutAnimation{
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0 55px 0;
+    flex-wrap: wrap;
+
+    .information{
+
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 650px;
+        letter-spacing: 1px;
+        color: var(--orange); 
+
+        .name{
+            font-size: 37px;
+            color: var(--red);
+        }
+        .desc{
+          width: 93%;
+        }
+        .quantites{
+          display: flex;
+          width: 260px;
+          justify-content: space-between;
+          color: var(--red);
+          .quantity{
+            display: flex;
+            gap: 10px;
+            font-size: 30px;
+            align-items: center;
+
+            .plus{
+              cursor: pointer;
+              font-size: 35px;
+            }
+
+          }
+        .price{ 
+          font-size: 28px;
+          color: var(--red);
+          background: var(--orange);
+          padding: 10px;
+          text-align: center;
+          border-radius: 21px;
+         }
+        }
+        .customise{
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            gap: 15px;
+            
+            .namecustomise{
+                font-size: 22px;
+                color: var(--red);
+            }
+             .overfloww{
+              max-height: 195px;
+              overflow: auto;
+             }
+             .overfloww::-webkit-scrollbar {
+              width: 8px;
+              cursor: pointer;
+              background-color: var(--orange);
+              border-radius: 20px;
+            }
+            .overfloww::-webkit-scrollbar-thumb{
+              background:var(--red);
+              border-radius: 20px;
+
+            }
+
+            .removeitem{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin: 6px 0;
+            .checkbox{
+
+                .bottom {
+                    display: none;
+                    visibility: hidden;
+                  }
+                .toggleButton {
+                    cursor: pointer;
+                    display: block;
+                    transform-origin: 50% 50%;
+                    transform-style: preserve-3d;
+                    transition: transform 0.14s ease;
+                 }
+                  
+                .toggleButton:active {
+                    transform: rotateX(30deg);
+                 }
+                  
+                .toggleButton .bottom + .imgs {
+                    border: 3px solid var(--orange);
+                    border-radius: 50%;
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                  }
+                  
+                .toggleButton .bottom + .imgs .svg {
+                    fill: none;
+                    stroke-width: 3.6;
+                    stroke: var(--orange);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    right: -3px;
+                    bottom: -3px;
+                    z-index: 1;
+                    stroke-dashoffset: 124.6;
+                    stroke-dasharray: 0 162.6 133 29.6;
+                    transition: all 0.4s ease 0s;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:before,
+                 .toggleButton .bottom + .imgs:after {
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    background: var(--orange);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 5px;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                    animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                    animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                 .toggleButton .bottom:checked + .imgs .svg {
+                    stroke-dashoffset: 162.6;
+                    stroke-dasharray: 0 162.6 28 134.6;
+                    transition: all 0.4s ease 0.2s;
+                  }
+                  
+                 .toggleButton .bottom:checked + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                    animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                  }
+                  
+                  .toggleButton .bottom:checked + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                    animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                  }
+             }
+            
+             .namee{ 
+                font-size: 21px;
+             }
+            
+
+            }
+
+
+            .addToCart{
+                    text-decoration: none;
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                    padding:  10px 25px;
+                    border-radius:10px ;
+                    text-align: center;
+                    transition: 0.5s;
+            }
+            .addToCart:hover{
+              color: var(--red);
+              border: 2px solid var(--red);
+            }
+        }
+
+
+    }
+}
+
+
+.withAnimation{
+    width: 98%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin: 30px auto 50px auto;
+    flex-wrap: wrap;
+
+    .burgeranimation{
+
+      background-color: var(--orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1px;
+      padding: 15px 0;
+      width: 450px;
+      height: 500px;
+      overflow: hidden;
+      .img{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 200px;
+        height: 45px;
+        transform: scale(1.8, 1.45);
+        transition: 0.7s;
+    }
+
+    }
+
+    .swiper {
+          max-width: 85%;
+          margin:0px auto;
+          display: none;
+          height: 130px;
+        .slide {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            gap: 12px;
+            cursor: pointer;
+            color: var(--orange);
+            padding: 0 3px;
+              .checkbox{
+
+                .bottom {
+                    display: none;
+                    visibility: hidden;
+                  }
+                .toggleButton {
+                    cursor: pointer;
+                    display: block;
+                    transform-origin: 50% 50%;
+                    transform-style: preserve-3d;
+                    transition: transform 0.14s ease;
+                }
+                  
+                .toggleButton:active {
+                    transform: rotateX(30deg);
+                }
+                  
+                .toggleButton .bottom + .imgs {
+                    border: 3px solid var(--orange);
+                    border-radius: 50%;
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                  }
+                  
+                .toggleButton .bottom + .imgs .svg {
+                    fill: none;
+                    stroke-width: 3.6;
+                    stroke: var(--orange);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    right: -3px;
+                    bottom: -3px;
+                    z-index: 1;
+                    stroke-dashoffset: 124.6;
+                    stroke-dasharray: 0 162.6 133 29.6;
+                    transition: all 0.4s ease 0s;
+                  }
+                  
+                .toggleButton .bottom + .imgs:before,
+                .toggleButton .bottom + .imgs:after {
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    background: var(--orange);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 5px;
+                  }
+                  
+                .toggleButton .bottom + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                    animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                .toggleButton .bottom + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                    animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                .toggleButton .bottom:checked + .imgs .svg {
+                    stroke-dashoffset: 162.6;
+                    stroke-dasharray: 0 162.6 28 134.6;
+                    transition: all 0.4s ease 0.2s;
+                  }
+                  
+                .toggleButton .bottom:checked + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                    animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                  }
+                  
+                  .toggleButton .bottom:checked + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                    animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                  }
+            }
+            
+            .namee{ 
+                font-size: 18px;
+            }
+        
+          }
+       }
+
+    .information{
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 600px;
+      letter-spacing: 1px;
+      color: var(--orange); 
+
+        .name{
+            font-size: 37px;
+            color: var(--red);
+        }
+
+        .desc{
+          width: 93%;
+        }
+        .quantites{
+          display: flex;
+          width: 260px;
+          justify-content: space-between;
+          color: var(--red);
+          
+          .quantity{
+            display: flex;
+            gap: 10px;
+            font-size: 30px;
+            align-items: center;
+            padding: 5px 10px;
+            border-radius: 40px;
+            .plus{
+              cursor: pointer;
+              font-size: 35px;
+            }
+
+          }
+          .price{ 
+                  font-size: 30px;
+                  background: var(--orange);
+                  width: 80px;
+                  padding: 8px;
+                  text-align: center;
+                  border-radius: 21px;
+
+          }
+
+      }
+        .customise{
+            display: flex;
+            flex-direction: column;
+            width: 65%;
+            gap: 15px;
+            
+            .namecustomise{
+                font-size: 22px;
+                color: var(--red);
+            }
+
+            .overfloww{
+              max-height:195px;
+              overflow: auto;
+            }
+            .overfloww::-webkit-scrollbar {
+              width: 8px;
+              cursor: pointer;
+              background-color: var(--orange);
+              border-radius: 20px;
+            }
+            .overfloww::-webkit-scrollbar-thumb{
+              background:var(--red);
+              border-radius: 20px;
+
+            }
+            .removeitem{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                margin: 6px 0;
+            .checkbox{
+
+                .bottom {
+                    display: none;
+                    visibility: hidden;
+                  }
+                .toggleButton {
+                    cursor: pointer;
+                    display: block;
+                    transform-origin: 50% 50%;
+                    transform-style: preserve-3d;
+                    transition: transform 0.14s ease;
+                 }
+                  
+                .toggleButton:active {
+                    transform: rotateX(30deg);
+                 }
+                  
+                .toggleButton .bottom + .imgs {
+                    border: 3px solid var(--orange);
+                    border-radius: 50%;
+                    position: relative;
+                    width: 25px;
+                    height: 25px;
+                  }
+                  
+                .toggleButton .bottom + .imgs .svg {
+                    fill: none;
+                    stroke-width: 3.6;
+                    stroke: var(--orange);
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    width: 25px;
+                    height: 25px;
+                    display: block;
+                    position: absolute;
+                    left: -3px;
+                    top: -3px;
+                    right: -3px;
+                    bottom: -3px;
+                    z-index: 1;
+                    stroke-dashoffset: 124.6;
+                    stroke-dasharray: 0 162.6 133 29.6;
+                    transition: all 0.4s ease 0s;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:before,
+                 .toggleButton .bottom + .imgs:after {
+                    content: "";
+                    width: 3px;
+                    height: 16px;
+                    background: var(--orange);
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    border-radius: 5px;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                    animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                 .toggleButton .bottom + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                    animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+                  }
+                  
+                 .toggleButton .bottom:checked + .imgs .svg {
+                    stroke-dashoffset: 162.6;
+                    stroke-dasharray: 0 162.6 28 134.6;
+                    transition: all 0.4s ease 0.2s;
+                  }
+                  
+                 .toggleButton .bottom:checked + .imgs:before {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+                    -webkit-animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                    animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+                  }
+                  
+                  .toggleButton .bottom:checked + .imgs:after {
+                    opacity: 0;
+                    transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+                    -webkit-animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                    animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+                  }
+             }
+            
+             .namee{ 
+                font-size: 21px;
+             }
+            
+
+            }
+
+            .addToCart{
+                    text-decoration: none;
+                    color: var(--orange);
+                    border: 2px solid var(--orange);
+                    padding:  10px 25px;
+                    border-radius:10px ;
+                    text-align: center;
+                    transition: 0.5s;
+            }
+            .addToCart:hover{
+              color: var(--red);
+              border: 2px solid var(--red);
+            }
+          }
+          .addToCartresponsive{
+                  text-decoration: none;
+                  color: var(--orange);
+                  border: 2px solid var(--orange);
+                  padding:  10px 25px;
+                  border-radius:10px ;
+                  text-align: center;
+                  transition: 0.5s;
+                  font-size: 22px;
+                  display: none;
+          }
+          .addToCartresponsive:hover{
+            color: var(--red);
+            border: 2px solid var(--red);
+          }
+
+
+    }
+}
+
+
+.circle{
+    width: 540px;
+    height: 520px;
+    border-radius: 50%;
+    background-color: var(--orange);
+    margin-left: -15px;
+    position: relative;
+    .img{
+        width: 90%;
+        height: 84%;
+        margin-top: 8%;
+        background-repeat: no-repeat;
+        background-size:contain;
+        background-position: center;
+        margin-left:28%;
+    }
+}
+
+
+
+@media screen and (max-width:1390px) {
+  .item{
+
+    .information{
+
+        width: 570px;
+        .name{
+            font-size: 35px;
+        }
+    }
+
+
+}
+
+  .withoutAnimation{
+
+    .information{
+
+        width: 570px;
+        .name{
+            font-size: 35px;
+        }
+
+        
+        .customise{
+           .overfloww{
+            max-height: 164px;
+
+           }
+
+
+      }
+    }
+
+
+}
+
+.withAnimation{
+
+  .burgeranimation{
+    width: 400px;
+    height: 470px;
+
+  }
+
+  .information{
+    width: 570px;
+
+      .name{
+          font-size: 35px;
+      }
+      .customise{
+          
+          .namecustomise{
+              font-size: 22px;
+              color: var(--red);
+          }
+
+          .overfloww{
+            max-height: 164px;
+          }
+  
+      }
+
+
+  }
+}
+
+.circle{
+  width: 500px;
+  height: 500px;
+  margin-left: -30px;
+}
+}
+@media screen and (max-width:1230px) {
+  .item{
+
+    .information{
+        width: 520px;
+        .name{
+            font-size: 30px;
+        }
+    }
+
+
+}
+.withoutAnimation{
+
+  .information{
+      width: 520px;
+      .name{
+          font-size: 30px;
+      }
+      .desc{
+        font-size: 16px;
+      }
+
+      .quantites{
+
+          .price{ 
+            font-size: 26px;
+          }
+      }
+       
+      .customise{
+         .overfloww{
+          max-height: 130px;
+         }
+
+
+    }
+  }
+
+
+}
+
+.withAnimation{
+  justify-content: space-around;
+
+  .burgeranimation{
+    width: 370px;
+    height: 440px;
+
+  }
+
+  .information{
+    width: 520px;
+    .name{
+        font-size: 30px;
+    }
+    .desc{
+      font-size: 16px;
+    }
+
+    .quantites{
+
+        .price{ 
+          font-size: 26px;
+        }
+    }
+     
+    .customise{
+       .overfloww{
+        max-height: 130px;
+       }
+  }
+}
+}
+
+.circle{
+  width: 470px;
+  height: 470px;
+  margin-left: -30px;
+}
+}
+@media screen and (max-width:1130px) {
+  .item{
+
+    .information{
+        width: 480px;
+        .name{
+            font-size: 29px;
+        }
+        .desc{
+          font-size: 16px;
+      }
+    }
+
+
+}
+
+.withoutAnimation{
+
+  .information{
+      width: 480px;
+      .name{
+          font-size: 29px;
+      }
+      .desc{
+        font-size: 15px;
+      }
+      .quantites{
+        width:50%;
+          .price{ 
+            font-size: 25px;
+          }
+      }
+       
+      .customise{
+        width: 60%;
+        .namecustomise{
+          font-size: 20px;
+      }
+         .overfloww{
+          max-height: 130px;
+         }
+
+         .removeitem{
+      
+       .namee{ 
+          font-size: 18px;
+       }
+      
+
+      }
+    }
+  }
+
+}
+
+.withAnimation{
+  .burgeranimation{
+    width: 350px;
+    height: 420px;
+
+  }
+
+  .information{
+    width: 480px;
+    .name{
+        font-size: 29px;
+    }
+    .desc{
+      font-size: 14px;
+    }
+    .quantites{
+      width:50%;
+        .price{ 
+          font-size: 25px;
+        }
+    }
+     
+    .customise{
+      width: 60%;
+      .namecustomise{
+        font-size: 20px;
+    }
+       .overfloww{
+        max-height: 130px;
+       }
+
+       .removeitem{
+    
+     .namee{ 
+        font-size: 18px;
+     }
+    
+
+    }
+  }
+}
+}
+
+.circle{
+  width: 440px;
+  height: 440px;
+  margin-left: -40px;
+}
+}
+
+@media screen and (max-width:1020px){
+  .item{
+      gap: 20px;
+      margin-bottom: 65px;
+    .information{
+        align-items: center;
+        gap: 25px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        .name{
+            font-size: 37px;
+        }
+        .desc{
+          font-size: 18px;
+        }
+    }
+
+
+}
+
+.withoutAnimation{
+  gap: 20px;
+  margin-bottom: 50px;
+
+  .information{
+    align-items: center;
+      gap: 25px;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      .name{
+          font-size: 37px;
+      }
+      .desc{
+        width: 95%;
+        font-size: 18px;
+      }
+      .quantites{
+        width: 230px;
+        .quantity{
+          display: flex;
+          gap: 10px;
+          font-size: 30px;
+          align-items: center;
+
+          .plus{
+            cursor: pointer;
+            font-size: 35px;
+          }
+
+        }
+      .price{ 
+        font-size: 28px;
+        color: var(--red);
+        background: var(--orange);
+        padding: 10px;
+        text-align: center;
+        border-radius: 21px;
+       }
+      }
+      .customise{
+          gap: 15px;
+          
+           .overfloww{
+            max-height: 164px;
+           }
+
+          .removeitem{
+
+           .namee{ 
+              font-size: 21px;
+           }
+          
+
+          }
+
+
+      }
+
+
+  }
+}
+
+.withAnimation{
+    gap: 25px;
+
+  .burgeranimation{
+    padding: 15px 0;
+    width: 400px;
+     height: 50vh;
+
+  }
+
+  .swiper {
+        display: block;
+     }
+
+     .information{
+        align-items: center;
+        gap: 25px;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        margin-top: 20px;
+        .name{
+            font-size: 37px;
+        }
+        .desc{
+          width: 95%;
+          font-size: 17px;
+        }
+        .quantites{
+          width: 230px;
+          .quantity{
+            display: flex;
+            gap: 10px;
+            font-size: 30px;
+            align-items: center;
+  
+            .plus{
+              cursor: pointer;
+              font-size: 35px;
+            }
+  
+          }
+        .price{ 
+          font-size: 28px;
+          color: var(--red);
+          background: var(--orange);
+          padding: 10px;
+          text-align: center;
+          border-radius: 21px;
+         }
+        }
+       .customise{
+            display: none;
+        }
+        
+        .addToCartresponsive{
+          display: block;
+        }
+  
+    }
+}
+
+.circle{
+  width: 540px;
+  height: 520px;
+  margin-left: -30px;
+
+}
+}
+
+@media screen and (max-width:720px){
+  .item{
+    .information{
+        width: 90%;
+        .name{
+            font-size: 35px;
+        }
+        .desc{
+          font-size: 17px;
+        }
+        .order{
+            gap: 50px;
+            .price{ 
+                font-size: 27px;
+            }
+
+          }
+    }
+
+
+}
+
+.withoutAnimation{
+
+  .information{
+      width: 90%;
+      .name{
+          font-size: 34px;
+      }
+      .desc{
+        font-size: 16px;
+      }
+      .quantites{
+        width: 220px;
+
+      .price{ 
+        font-size: 27px;
+
+       }
+      }
+
+  }
+}
+
+.withAnimation{
+
+  .burgeranimation{
+    padding: 15px 0;
+    width: 80%;
+  }
+
+   .information{
+      width: 90%;
+      .name{
+          font-size: 34px;
+      }
+      .desc{
+        font-size: 16px;
+      }
+      .quantites{
+        width: 220px;
+
+      .price{ 
+        font-size: 27px;
+
+       }
+      }
+  }
+}
+
+
+.circle{
+  width: 450px;
+  height: 450px;
+  margin-left: -30px;
+
+}
+}
+
+@media screen and (max-width:550px){
+  .item{
+      gap: 25px;
+    .information{
+        width: 96%;
+        .name{
+            font-size: 30px;
+        }
+        .desc{
+          font-size: 16px;
+        }
+        .order{
+            gap: 50px;
+            .price{ 
+                font-size: 25px;
+            }
+
+          }
+    }
+}
+
+.withoutAnimation{
+
+  .information{
+      width: 96%;
+      .name{
+          font-size: 30px;
+      }
+      .desc{
+        font-size: 15px;
+      }
+
+      .customise{
+         width: 70%;
+         .overfloww{
+           max-height: 160px;
+         }
+
+        .removeitem{
+
+         .namee{ 
+            font-size: 20px;
+         }
+        
+
+        }
+
+
+    }
+
+  }
+}
+
+.withAnimation{
+
+   .information{
+      width: 96%;
+      .name{
+          font-size: 30px;
+      }
+      .desc{
+        font-size: 15px;
+      }
+  }
+}
+
+.circle{
+  width: 400px;
+  height: 400px;
+  margin-left: -35px;
+
+}
+}
+
+@media screen and (max-width:460px){
+  .item{
+    .information{
+        width: 97%;
+        .name{
+            font-size: 25px;
+        }
+        .desc{
+          font-size: 14px;
+        }
+    }
+}
+
+.withoutAnimation{
+  
+  .information{
+      .name{
+          font-size: 24px;
+      }
+      .desc{
+        font-size: 14px;
+      }
+      .quantites{
+        width: 200px;
+
+      .price{ 
+        font-size: 25px;
+
+       }
+      }
+      .customise{
+         width: 80%;
+         .overfloww{
+           max-height: 160px;
+         }
+
+        .removeitem{
+
+         .namee{ 
+            font-size: 18px;
+         }
+        
+
+        }
+
+
+    }
+
+
+  }
+}
+
+.withAnimation{
+
+  .burgeranimation{
+    width: 85%;
+  }
+
+ .swiper {
+  height: 110px;
+      .slide{
+        .checkbox{
+
+          .bottom {
+              display: none;
+              visibility: hidden;
+            }
+          .toggleButton {
+              cursor: pointer;
+              display: block;
+              transform-origin: 50% 50%;
+              transform-style: preserve-3d;
+              transition: transform 0.14s ease;
+          }
+            
+          .toggleButton:active {
+              transform: rotateX(30deg);
+          }
+            
+          .toggleButton .bottom + .imgs {
+              border: 3px solid var(--orange);
+              border-radius: 50%;
+              position: relative;
+              width: 23px;
+              height: 23px;
+            }
+            
+          .toggleButton .bottom + .imgs .svg {
+              fill: none;
+              stroke-width: 3.6;
+              stroke: var(--orange);
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              width: 23px;
+              height: 23px;
+              display: block;
+              position: absolute;
+              left: -3px;
+              top: -3px;
+              right: -3px;
+              bottom: -3px;
+              z-index: 1;
+              stroke-dashoffset: 124.6;
+              stroke-dasharray: 0 162.6 133 29.6;
+              transition: all 0.4s ease 0s;
+            }
+            
+          .toggleButton .bottom + .imgs:before,
+          .toggleButton .bottom + .imgs:after {
+              content: "";
+              width: 3px;
+              height: 14px;
+              background: var(--orange);
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              border-radius: 5px;
+            }
+            
+          .toggleButton .bottom + .imgs:before {
+              opacity: 0;
+              transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+              -webkit-animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+              animation: bounceInBefore-44 0.3s linear forwards 0.3s;
+            }
+            
+          .toggleButton .bottom + .imgs:after {
+              opacity: 0;
+              transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+              -webkit-animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+              animation: bounceInAfter-44 0.3s linear forwards 0.3s;
+            }
+            
+          .toggleButton .bottom:checked + .imgs .svg {
+              stroke-dashoffset: 162.6;
+              stroke-dasharray: 0 162.6 28 134.6;
+              transition: all 0.4s ease 0.2s;
+            }
+            
+          .toggleButton .bottom:checked + .imgs:before {
+              opacity: 0;
+              transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+              -webkit-animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+              animation: bounceInBeforeDont-44 0.3s linear forwards 0s;
+            }
+            
+            .toggleButton .bottom:checked + .imgs:after {
+              opacity: 0;
+              transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+              -webkit-animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+              animation: bounceInAfterDont-44 0.3s linear forwards 0s;
+            }
+      }
+        .namee{
+         font-size: 15px;
+        }
+      }
+   }
+
+   .information{
+      .name{
+          font-size: 24px;
+      }
+      .desc{
+        font-size: 14px;
+      }
+      .quantites{
+        width: 200px;
+
+      .price{ 
+        font-size: 25px;
+
+       }
+      }
+      .addToCartresponsive{
+        font-size: 18px;
+  
+      }
+  }
+}
+
+.circle{
+  width: 300px;
+  height: 300px;
+  margin-left: -30px;
+
+}
+}
+
+
+
+
+
+
+@-webkit-keyframes bounceInBefore-44 {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  
+  @keyframes bounceInBefore-44 {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: scale(0.89) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  
+  @-webkit-keyframes bounceInAfter-44 {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  
+  @keyframes bounceInAfter-44 {
+    0% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    50% {
+      opacity: 0.9;
+      transform: scale(1.1) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    80% {
+      opacity: 1;
+      transform: scale(0.89) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  
+  @-webkit-keyframes bounceInBeforeDont-44 {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  
+  @keyframes bounceInBeforeDont-44 {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(45deg);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  
+  @-webkit-keyframes bounceInAfterDont-44 {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  
+  @keyframes bounceInAfterDont-44 {
+    0% {
+      opacity: 1;
+      transform: scale(1) translate(-50%, -50%) rotate(-45deg);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: scale(0.3) translate(-50%, -50%) rotate(-45deg);
+    }
+  }

@@ -1,0 +1,175 @@
+.layout{
+    position: relative;
+    z-index: 0;
+}
+.animation{
+    background-color: var(--red);
+    .features{
+        display: flex;
+        justify-content: center;
+        color: var(--lightorange);
+        padding:5px 0 ;
+        width: fit-content;
+        position: relative;
+        animation: feature  infinite 10s linear;
+        .feature{
+            padding: 0 100px;
+        }
+    }
+}
+
+.menu{
+        margin:30px 0 50px 0 ;
+        width: 100%;
+        .products{
+            width: 90%;
+            margin: 0 auto;
+            .category{
+                position: relative;
+                .name{
+                    color: var(--red);
+                    /* margin:30px 0 ; */
+                    font-size: 30px;
+                    font-weight: 500;
+                }
+                
+                .svg{
+                    position: absolute;
+                    top: 145px;
+                    left: -170px;
+                }
+                }
+        
+            .swiper {
+                width: 100%;
+                height: 320px;
+                margin: 30px 0;
+            
+            
+            .slides {
+                .links{
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-decoration: none;
+                }
+                .img{
+                width: 100%;
+                height: 190px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                transition: 0.5s;
+                }
+                .name{
+                    font-size: 23px;
+                    text-align: center;
+                    margin: 20px 3px;
+                }
+            }
+            }
+       }
+  }
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+
+        .features{
+            .feature{
+                padding: 0 80px;
+            }
+        }
+    }
+    
+
+@media screen and (max-width: 700px) {
+
+    .animation{
+
+        .features{
+            .feature{
+                padding: 0 40px;
+            }
+        }
+    }
+
+    .menu{
+        .products{
+
+            .category{
+                .name{
+
+                    margin:20px 0 ;
+                    font-size: 28px;
+                }
+        
+                }
+        
+            .swiper {
+                width: 100%;
+                height: 300px;
+            
+            
+            .slides {
+                .img{
+                width: 100%;
+                height: 170px;
+                }
+                .name{
+                    font-size: 20px;
+                    text-align: center;
+                }
+            }
+            }
+       }
+  }
+    }
+
+@media screen and (max-width: 450px) {
+
+    .animation{
+
+        .features{
+            .feature{
+                padding: 0 20px;
+            }
+        }
+    }
+
+    .menu{
+        .products{
+            width: 98%;
+            .swiper {
+                margin: 20px 0;
+                height: 290px;
+            .slides {
+                .name{
+                    font-size:initial;
+                }
+                .img{
+                    width: 90%;
+                    margin: 0 auto;
+                }
+            }
+            }
+       }
+  }
+    }
+
+    @keyframes feature {
+        0%{
+          left: 100%;
+        }
+        100%{
+            left: -100%;
+        }
+    }

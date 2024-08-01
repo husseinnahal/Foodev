@@ -1,0 +1,347 @@
+.offers{
+
+ margin: 30px 0;
+
+    .offer{   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left:8% ;
+        .definition{
+            color: var(--orange);
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 48%;
+            .title{
+              font-size: 55px;
+              letter-spacing: 1px;
+              word-spacing: 1px;
+            }
+
+            .desc{
+                font-size: 30px;
+                font-weight: 300;
+                width: 80%; 
+                letter-spacing: 1px;
+                word-spacing: 1px;
+            }
+
+            .butons{
+                display: flex;
+                gap: 35px;
+                font-size: 22px;
+                .price{
+                    color: var(--red);
+                    padding: 10px 15px;
+                    border-radius: 10px;
+                    background-color: var(--orange);
+                }
+
+                .viewOffers{
+
+                    color: var(--red);
+                    text-decoration: none;
+                    padding: 10px 15px ;
+                    border: 2px solid var(--red);
+                    border-radius: 10px ;
+                    word-spacing: 0;
+                    letter-spacing: 1px;
+                    transition: 0.5s;
+
+                }
+                .viewOffers:hover{
+                    background-color: var(--red);
+                    color: var(--lightorange);
+                }
+            }
+        }
+
+        .circle{
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background-color: var(--orange);
+            .img{
+                height: 100%;
+                width: 100%;
+                margin-left: -23%;
+                object-fit: contain;
+            }
+        }
+    }
+
+
+    }
+
+
+    .swiperoffer{
+        .swiper {
+            max-width: 60%;
+            height: 190px;
+            margin:20px auto;
+          .slide {
+            text-align: center;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+            cursor: pointer;
+            color: var(--orange);
+                .scaleOfImg{
+                    width: 100%;
+                    height: 90px;
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+             
+            }
+            }
+          }
+    }
+
+    @media screen and (max-width:1370px) {
+        
+        .offers{
+
+
+         
+               .offer{
+                    
+                   .definition{
+                       .title{
+                         font-size: 50px;
+                       }
+           
+                       .desc{
+                           font-size: 30px;
+                       }
+           
+                   }
+           
+                   .circle{
+                       width: 450px;
+                       height: 450px;
+                   }
+               }
+           
+           
+               }
+           
+    }
+    @media screen and (max-width:1240px) {
+        
+        .offers{
+
+               .offer{
+                    
+                   .definition{
+
+                       .title{
+                         font-size: 45px;
+                       }
+           
+                       .desc{
+                           font-size: 25px;
+                       }
+           
+                   }
+           
+                   .circle{
+                       width: 400px;
+                       height: 400px;
+                   }
+               }
+           
+           
+               }
+           
+    }
+    @media screen and (max-width:1100px) {
+        
+        .offers{
+               .offer{
+                    
+                   .definition{
+                       .title{
+                         font-size: 40px;
+                       }
+           
+                       .desc{
+                           font-size: 22px;
+                       }
+           
+                   }
+           
+                   .circle{
+                       width: 350px;
+                       height: 350px;
+                   }
+               }
+           
+           
+               }
+           
+    }
+    @media screen and (max-width:980px){
+        .offers{
+            margin: 50px 0 30px 0;
+               .offer{
+                   width: 100%;
+                   margin-left: 0;
+                   display: flex;
+                   flex-direction: column;
+                   align-items: flex-start;
+
+                   .definition{
+                       margin-left:6% ;
+                       width: 70%;
+                       .title{
+                         font-size: 50px;;
+                       }
+
+                   }
+           
+                   .circle{
+                       width: 470px;
+                       height: 470px;
+                       align-self: flex-end;
+                       margin-right: -60px;
+                       margin-top: -45px;
+                       .img{
+                           height: 90%;
+                           width: 90%;
+                           margin-top:5%;
+                           margin-left: -27%;
+                       }
+                   }
+               }
+           
+           
+               }
+    }
+    @media screen and (max-width:700px){
+        .offers{
+
+               .offer{
+
+                   .definition{
+                       margin-left:3% ;
+                       .title{
+                         font-size: 40px;;
+                       }
+
+                   }
+           
+                   .circle{
+                       width: 430px;
+                       height: 430px;
+                       align-self: flex-end;
+                       margin-right: -60px;
+                       margin-top: 0px;
+                       .img{
+                           height: 86%;
+                           width: 86%;
+                           margin-top:7%;
+                           margin-left: -23%;
+                       }
+                   }
+               }
+           
+           
+               }
+    }
+    @media screen and (max-width:500px){
+        .offers{
+               .offer{
+
+                   .definition{
+                       .title{
+                         font-size: 35px;;
+                       }
+                       .desc{
+                        font-size: 20px;
+                        width: 90%; 
+    
+                    }
+                    .butons{
+                        display: flex;
+                        gap: 30px;
+                        font-size: 20px;
+        
+                        .viewOffers{
+                            padding: 10px 10px ;
+        
+                        }
+                    }
+                   }
+           
+                   .circle{
+                       width: 380px;
+                       height: 380px;
+                       margin-right: -80px;
+                       .img{
+                           height: 82%;
+                           width: 82%;
+                           margin-top:9%;
+                       }
+                   }
+               }
+           
+           
+               }
+    }
+
+    @media screen and (max-width:410px){
+        .offers{
+               .offer{
+
+                   .definition{
+
+                    width: 90%;
+                       .title{
+                         font-size: 27px;;
+                       }
+                       .desc{
+                        font-size: 18px;    
+                    }
+                   }
+           
+                   .circle{
+                       width: 350px;
+                       height: 350px;
+                       margin-right: -110px;
+                       margin-top: 20px;
+                       .img{
+                           height: 78%;
+                           width: 78%;
+                           margin-top:11%;
+                       }
+                   }
+               }
+           
+           
+               }
+    }
+    @media screen and (max-width:760px) {
+        
+        .swiperoffer{
+            .swiper {
+                max-width: 80%;
+                height: 170px;
+              .slide {
+
+                font-size: 15px;
+                    .scaleOfImg{
+                        width: 100%;
+                        height: 80px;
+                 
+                }
+                }
+              }
+        }
+    
+    }
