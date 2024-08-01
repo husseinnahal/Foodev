@@ -125,7 +125,7 @@
          }
       
          .box:hover{
-           transform: scale(1.2);
+           transform: scale(1.05);
          }
         }
         .service:hover .box:not(:hover){
@@ -654,6 +654,13 @@
    }
    .app{
     padding-top: 80px;
+    .wavetop {
+        .svg {
+          width: 126%;
+      }
+  
+
+    }
      .informations{
 
       .links{
@@ -789,7 +796,7 @@
    
        .phone{
         height: 400px;
-        width: 250px;
+        width: 200px;
         border-radius: 30px;
        }
 
