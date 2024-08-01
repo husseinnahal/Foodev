@@ -1,12 +1,12 @@
 .feltercat{
     margin: 45px 0;
     color: var(--red);
- .title{
-    width: 90%;
-    margin: auto;
-    margin-bottom: 25px;
-    font-size: 50px;
- }
+    .title{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 35px;
+        font-size: 50px;
+    }
     .items{
         display: flex;
         flex-wrap: wrap;
@@ -44,4 +44,16 @@
     }
 
 
+}
+
+
+@media (max-width:500px) {
+    .feltercat{
+        .title{
+            font-size: 38px;
+        }
+
+    
+    
+    }
 }

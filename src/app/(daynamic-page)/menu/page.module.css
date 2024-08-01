@@ -148,6 +148,12 @@
     .menu{
         .products{
             width: 98%;
+            .category{
+
+                .name{
+                    margin-left: 20px;
+                }
+            }
             .swiper {
                 margin: 20px 0;
                 height: 290px;

@@ -40,7 +40,7 @@ export default function Menu() {
 
         <div key={it.id} className={styles.category}>
           
-        <h2 className={styles.name }>{it.name}</h2>
+          <h2 className={styles.name }>{it.name}</h2>
         
           <svg width={2056} className={styles.svg} height={75} viewBox="0 0 2056 78" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M1 75.7797L11.4875 67.1405C83.5985 7.73806 182.113 -8.22379 269.292 25.3697L310.123 41.1036C368.168 63.4709 432.325 64.1998 490.864 43.157L552.057 21.1601C603.461 2.68224 659.39 0.92946 711.85 16.1523L845.072 54.8107C892.27 68.5069 942.392 68.4917 989.582 54.7668L1135.1 12.4453C1179.47 -0.461457 1226.5 -1.25867 1271.29 10.1364L1460.89 58.3754C1505.68 69.7704 1552.71 68.9732 1597.08 56.0664L1735.73 15.743C1787.2 0.772042 1842.05 2.14236 1892.72 19.6649L2054.96 75.7797" stroke="#FF8F4C" strokeWidth="3" strokeDasharray="6 6"/>
