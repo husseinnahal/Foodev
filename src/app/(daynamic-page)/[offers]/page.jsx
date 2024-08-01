@@ -8,7 +8,7 @@ import { Usecontextoffer } from '@/context/offercontext';
 import { useEffect, useState } from 'react';
 
 
-export default function page({params}) {
+export default function Offers({params}) {
 
   const offers=[
     {id:0,name:"comboee burger burgeg ",desc:"2 burgerrr from you choice",price:23,img:"/offer.png",alt:"a"},
@@ -33,6 +33,7 @@ export default function page({params}) {
   const offer = getOfferById(idoffer);
 
   const [animationClass, setAnimationClass] = useState('');
+
   useEffect(() => {
     setAnimationClass('animate__animated animate__zoomIn');
 

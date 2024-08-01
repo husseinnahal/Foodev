@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Styles from './page.module.css'
 
 
-export default function page() {
+export default function Checkout() {
   return (
     <div className={Styles.checkout}>
         
