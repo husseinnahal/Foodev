@@ -1,6 +1,5 @@
 "use client"
 import styles from "./page.module.css"
-import Image from 'next/image';
 import Offers from "../[offers]/page"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -78,7 +77,6 @@ export default function Menu() {
           )}
           
         </Swiper>
-
         </div>
       )}
 

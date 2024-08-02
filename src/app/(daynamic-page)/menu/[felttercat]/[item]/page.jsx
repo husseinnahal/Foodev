@@ -14,7 +14,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Item() {
 
 const names =[ 
-  {id:1,name:"Fresh tomatoes tometes eedcsxs"},
+  {id:1,name:"Fresh tomatoes  "},
   {id:2,name:"mayo"},
   {id:3,name:"Ketchup"},
   {id:4,name:"mayo"},

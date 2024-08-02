@@ -34,7 +34,7 @@
       }
     }
     .links:hover{
-      color: var(--red);
+      background-color: var(--red);
     }
   }
 }

@@ -1,7 +1,6 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import Image from "next/image";
 import styles from "./page.module.css"
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -34,8 +33,8 @@ export default function Category() {
     <div className={styles.category}> 
       
       <Swiper
-        slidesPerView={2.5}
-        spaceBetween={10}
+        slidesPerView={2.2}
+        spaceBetween={7}
 
         breakpoints={{
           500: {
@@ -62,7 +61,7 @@ export default function Category() {
         className={styles.swiper}
       >
         <SwiperSlide className={styles.slides} >
-          <Link className={styles.links} href={`/menu`} style={{color: path==="/menu"? "#6D0000": ""}}>
+          <Link className={styles.links} href={`/menu`} style={{backgroundColor: path==="/menu"? "#6D0000": ""}}>
             <div style={{backgroundImage:`url(${Food.src})`}}  className={styles.img}></div>
             <p className={styles.name}>ALL</p>
           </Link>
@@ -70,7 +69,7 @@ export default function Category() {
 
         {category.map((cat) =>
         <SwiperSlide className={styles.slides} key={cat.id}>
-          <Link className={styles.links} style={{color: isActive(`/menu/${cat.name}`) ? "#6D0000": ""}} href={`/menu/${cat.name}`}>
+          <Link className={styles.links} style={{ backgroundColor: isActive(`/menu/${cat.id}`) ? "#6D0000": ""}} href={`/menu/${cat.id}`}>
             <div style={{backgroundImage:`url(${cat.src})`}}  className={styles.img}></div>
             <p className={styles.name}>{cat.name}</p>
           </Link>
