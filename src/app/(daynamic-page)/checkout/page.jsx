@@ -43,7 +43,7 @@ export default function Checkout() {
             <div className={Styles.items}>
 
             {cart.map((item)=>
-              <div className={Styles.item}> 
+              <div className={Styles.item} key={item.id}> 
                 <p className={Styles.name}>{item.name} x {item.quantiti}</p>
                 <p className={Styles.price}>{item.quantiti*item.price}$</p>
               </div>
