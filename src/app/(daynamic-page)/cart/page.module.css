@@ -25,74 +25,74 @@ color: var(--red);
     max-height: 475px;
     overflow-y: auto;
     direction: rtl;
-    .item{
-        padding: 13.7px 10px;
+    
+    
+}
+.item{
+    padding: 13.7px 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: -3px;
+    border: 3px solid var(--orange);
+    position: relative;
+    direction: ltr;
+
+    .img{
+        width: 90px;
+        height: 70px;
+        min-height: 50%;
+        max-height:80% ;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        transform: scale(1.6);
+        margin: auto 0;
+        margin-left: 20px;
+    }
+    .information{
         display: flex;
-        justify-content: space-between;
-        width: 100%;
-        margin-bottom: -3px;
-        border: 3px solid var(--orange);
-        position: relative;
-        direction: ltr;
-
-        .img{
-            width: 90px;
-            height: 70px;
-            min-height: 50%;
-            max-height:80% ;
-            background-repeat: no-repeat;
-            background-size: contain;
-            background-position: center;
-            transform: scale(1.6);
-            margin: auto 0;
-            margin-left: 20px;
+        flex-direction: column;
+        gap: 10px;
+        color: var(--red);
+        width: 400px;
+        .name{
+            font-size: 25px;
         }
-        .information{
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            color: var(--red);
-            width: 400px;
-            .name{
-                font-size: 25px;
-            }
-            .summary{
-                cursor: pointer;
-                color: #FF8F4C;
-            }
-            .customise{
-                font-size: 15px;
-
-                padding: 5px 0;
-                color: #fcac7d;
-                max-width:400px;
-                min-width: 100px;
-            }
-
-        }
-        .quantity{
-            display: flex;
-            gap: 10px;
-            font-size: 30px;
-            align-items: center;
-
-            .plus{
-              cursor: pointer;
-              font-size: 35px;
-            }
-
-          }
-        .editing{
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            font-size: 33px; 
+        .summary{
             cursor: pointer;
-            margin-top: -12px;
+            color: #FF8F4C;
+        }
+        .customise{
+            font-size: 15px;
+
+            padding: 5px 0;
+            color: #fcac7d;
+            max-width:400px;
+            min-width: 100px;
         }
 
     }
+    .quantity{
+        display: flex;
+        gap: 10px;
+        font-size: 30px;
+        align-items: center;
 
+        .plus{
+          cursor: pointer;
+          font-size: 35px;
+        }
+
+      }
+    .editing{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 33px; 
+        cursor: pointer;
+        margin-top: -12px;
+    }
 
 }
 .myitems::-webkit-scrollbar {
