@@ -29,9 +29,8 @@ function Item({ cart }) {
   return (
     <div className={Style.item} >
 
-    <div className={Style.img} style={{backgroundImage:`url(${Burgers.src})`}}></div>
-
-    <div className={Style.information}>
+       <div className={Style.img} style={{backgroundImage:`url(${Burgers.src})`}}></div>
+       <div className={Style.information}>
 
         <h1 className={Style.name}>{cart.name}</h1>
 
@@ -42,17 +41,17 @@ function Item({ cart }) {
 
         <p className={Style.price}>{cart.price}$</p>
 
-    </div>
+       </div>
 
-    <div className={Style.quantity}>
-      <p className={Style.plus} onClick={()=> decrease(cart.id)}>-</p>
-      <p className={Style.nb}>{cart.quantiti}</p>
-      <p className={Style.plus} onClick={()=> increase(cart.id)}>+</p>
-    </div>
+      <div className={Style.quantity}>
+        <p className={Style.plus} onClick={()=> decrease(cart.id)}>-</p>
+        <p className={Style.nb}>{cart.quantiti}</p>
+        <p className={Style.plus} onClick={()=> increase(cart.id)}>+</p>
+      </div>
 
-    <div className={Style.editing}>
-        <p onClick={() => removeFromCart(cart.id)}>x</p>
-    </div>
+      <div className={Style.editing}>
+          <p onClick={() => removeFromCart(cart.id)}>x</p>
+      </div>
 
     </div>
   );
