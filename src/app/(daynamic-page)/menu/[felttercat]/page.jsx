@@ -28,6 +28,7 @@ export default function Felttercat({params}) {
             <Link href={`/menu/${params.felttercat}/${item.id}`} className={styles.item} key={item.id}> 
 
                 <div style={{backgroundImage:`url(${item.src})`}} className={styles.img}></div>
+                {/* <Image src={item.src} width={200} height={150} alt={item.alt} priority/> */}
                 <p className={styles.name}>{item.name}</p>
                 <p className={styles.price}>{item.price}$</p>
             </Link>
