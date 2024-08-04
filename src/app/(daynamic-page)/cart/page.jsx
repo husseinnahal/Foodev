@@ -4,18 +4,6 @@ import Style from "./page.module.css"
 import Burgers from "@/../public/about/mshawi.png"
 import { Usecontextcart } from "@/context/cartecontext";
 
-
-export default function Cart() {
-
-const {setOpen,cart,subtotal} = Usecontextcart(); 
-function close(){
-  setOpen(-420);
- }
-
-
-
-
-
 function Item({ cart }) {
 
   const {setCart,removeFromCart} = Usecontextcart(); 
@@ -69,6 +57,16 @@ function Item({ cart }) {
     </div>
   );
 }
+
+
+export default function Cart() {
+
+const {setOpen,cart,subtotal} = Usecontextcart(); 
+function close(){
+  setOpen(-420);
+ }
+
+
 
   return (
     <div className={Style.cart}>
