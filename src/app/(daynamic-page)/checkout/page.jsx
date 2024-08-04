@@ -4,7 +4,7 @@ import Styles from './page.module.css'
 import { Usecontextcart } from '@/context/cartecontext'
 
 export default function Checkout() {
-  const {cart} = Usecontextcart(); 
+  const {cart,subtotal} = Usecontextcart(); 
 
 
   return (
@@ -42,20 +42,18 @@ export default function Checkout() {
 
             <div className={Styles.items}>
 
+            {cart.map((item)=>
               <div className={Styles.item}> 
-                <p className={Styles.name}>burger x 3</p>
-                <p className={Styles.price}>47$</p>
+                <p className={Styles.name}>{item.name} x {item.quantiti}</p>
+                <p className={Styles.price}>{item.quantiti*item.price}$</p>
               </div>
-              <div className={Styles.item}> 
-                <p className={Styles.name}>burger x 3</p>
-                <p className={Styles.price}>47$</p>
-              </div>
+            )}
 
             </div>
 
             <div className={Styles.total}>
               <h2 className={Styles.titles}>Subtotal</h2>
-              <p className={Styles.price}>150$</p>
+              <p className={Styles.price}>{subtotal}$</p>
             </div>
 
             <div className={Styles.total}>
@@ -65,11 +63,11 @@ export default function Checkout() {
 
             <div className={Styles.total}>
               <h2 className={Styles.titles}>Total</h2>
-              <p className={Styles.price}>150$</p>
+              <p className={Styles.price}>{subtotal+3}$</p>
             </div>
 
 
-            <Link href="/checkout" className={Styles.chekcout}>ORDER</Link>
+            <Link href="/cart" className={Styles.chekcout}>ORDER</Link>
 
         </div>
 

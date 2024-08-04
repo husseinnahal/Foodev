@@ -78,58 +78,58 @@
     gap: 25px;
     flex-grow: 1;
     min-width: 420px;
-    .name{
-        display: flex;
-        gap: 20px;
-        width: 80%;
-        margin: 0 auto;
-        .input{
-            flex-grow: 1;
-            border: 2px solid var(--red);
-            padding: 10px;
-            border-radius: 20px;
-            background-color: transparent;
-            color: transparent;
-        }
-        .input::placeholder{
-            color: var(--red);
-        }
-    }
-     
+    
+}
+.name{
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
     .input{
-        width: 80%;
-        margin: 0 auto;
+        flex-grow: 1;
         border: 2px solid var(--red);
         padding: 10px;
         border-radius: 20px;
         background-color: transparent;
-        color: var(--red);
+        color: transparent;
     }
     .input::placeholder{
         color: var(--red);
     }
-    .input:focus{
-        outline: none;
-        border: 2px solid var(--orange);
-    }
-    .send{
-        width: 80%;
-        margin: 0 auto;
-        padding: 10px;
-        background: var(--red);
-        border: none;
-        border-radius: 28px;
-        font-size: 33px;
-        color: var(--lightorange);
-        letter-spacing: 1px;
-        transition: 0.5s;
+}
+ 
+.input{
+    width: 80%;
+    margin: 0 auto;
+    border: 2px solid var(--red);
+    padding: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--red);
+}
+.input::placeholder{
+    color: var(--red);
+}
+.input:focus{
+    outline: none;
+    border: 2px solid var(--orange);
+}
+.send{
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    background: var(--red);
+    border: none;
+    border-radius: 28px;
+    font-size: 33px;
+    color: var(--lightorange);
+    letter-spacing: 1px;
+    transition: 0.5s;
 
-    }
-    .send:hover{
-        background-color:#3b0303;
-        color: var(--orange);
-    }
-
+}
+.send:hover{
+    background-color:#3b0303;
+    color: var(--orange);
 }
 
 .details{
