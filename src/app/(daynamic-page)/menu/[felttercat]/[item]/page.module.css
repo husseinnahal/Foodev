@@ -50,14 +50,14 @@
 
           }
           .addToCart{
-              text-decoration: none;
               color: var(--orange);
               border: 2px solid var(--orange);
+              background-color: transparent;
               padding:  10px 25px;
               border-radius:10px ;
               transition: 0.5s;
+              font-size: 19px;
               width: 250px;
-              text-align: center;
           }
           .addToCart:hover{
             color: var(--red);
@@ -252,12 +252,12 @@
 
 
             .addToCart{
-                    text-decoration: none;
+                    background-color: transparent;
                     color: var(--orange);
                     border: 2px solid var(--orange);
                     padding:  10px 25px;
                     border-radius:10px ;
-                    text-align: center;
+                    font-size: 17px;
                     transition: 0.5s;
             }
             .addToCart:hover{
@@ -597,13 +597,14 @@
             }
 
             .addToCart{
-                    text-decoration: none;
                     color: var(--orange);
                     border: 2px solid var(--orange);
+                    background-color: transparent;
                     padding:  10px 25px;
                     border-radius:10px ;
-                    text-align: center;
+                    font-size: 17px;
                     transition: 0.5s;
+
             }
             .addToCart:hover{
               color: var(--red);
@@ -611,12 +612,11 @@
             }
           }
           .addToCartresponsive{
-                  text-decoration: none;
                   color: var(--orange);
                   border: 2px solid var(--orange);
+                  background-color: transparent;
                   padding:  10px 25px;
                   border-radius:10px ;
-                  text-align: center;
                   transition: 0.5s;
                   font-size: 22px;
                   display: none;

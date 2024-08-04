@@ -45,10 +45,23 @@
         align-items: flex-end;
         transition: 0.5s;
     }
-    .tocart:hover{
+    .tocart:hover {
         color: var(--red);
+        .svg{
+          fill: var(--red);
+          transition: 0.5s;
+
+        }
     }
     
+    .empty{
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        font-size: 35px;
+        color: var(--orange);
+    }
     .order{
         display: flex;
         gap: 30px;
@@ -405,7 +418,9 @@
             }
         }
         
-        
+        .empty{
+              font-size: 27px;
+          }
         .order{
             margin-top:35px ;
             gap: 20px;

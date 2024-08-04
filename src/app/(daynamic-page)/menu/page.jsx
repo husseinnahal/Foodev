@@ -13,21 +13,14 @@ export default function Menu() {
   const item = [
 
     { id: 0,  name:"Burger"    ,
-       items:[{id:1 , name:"Burger burgere butger" , src: '/off4.png', alt:"byu"} ,{id:7 , name:"Burgeqr" , src: '/off4.png', alt:"byeu"},{id:2 , name:"Burgers" , src: '/about/burger.png', alt:"byqu"} ,{id:3 , name:"Burgeqr" , src: '/about/burger.png', alt:"byeu"} ,{id:4 , name:"Burgeqr" , src: '/about/burger.png', alt:"byFeu"}] },
+       items:[{id:1 ,price:10, name:"Burger burgere butger" , src: '/off4.png', alt:"byu"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/off4.png', alt:"byeu"},{id:2 ,price:20, name:"Burgers" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgeqr" , src: '/about/burger.png', alt:"byeu"} ,{id:4 ,price:40, name:"Burgeqr" , src: '/about/burger.png', alt:"byFeu"}] },
     { id: 1,name:"Burger" , 
-       items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bjyu"},{id:2 , name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 , name:"Burgeqr" , src: '/about/burger.png', alt:"bu"}   ,{id:5 , name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
+       items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bjyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgeqr" , src: '/about/burger.png', alt:"bu"}   ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
     { id: 2,  name: "Starters" ,
-       items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bkyu"},{id:2 , name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 , name:"Burgqer" , src: '/about/burger.png', alt:"byue"} ,{id:5 , name:"Burgeqr" , src: '/about/burger.png', alt:"byCeu"}]  },
+       items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bkyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgqer" , src: '/about/burger.png', alt:"byue"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byCeu"}]  },
     { id: 3,  name: "Sandwitch", 
-      items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bnyu"},{id:2 , name:"Burgser" , src: '/about/burger.png', alt:"byuq"} ,{id:3 , name:"Burgqer" , src: '/about/burger.png', alt:"byeu"} ,{id:4 , name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
-    { id: 4,  name: "Plates"   , 
-      items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bmu"} ,{id:2 , name:"Bursger" , src: '/about/burger.png', alt:"byuq"} ,{id:3 , name:"Burgqer" , src: '/about/burger.png', alt:"ebyu"} ,{id:5 , name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}] },
-    { id: 5,  name: "Drinks"   ,
-       items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bku"} ,{id:2 , name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 , name:"Burgqer" , src: '/about/burger.png', alt:"byeu"} ,{id:4 , name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}] },
-    { id: 6,  name: "Pizza"  ,   
-      items:[{id:1 , name:"Burger" , src: '/about/burger.png', alt:"bpu"} ,{id:2 , name:"Burgser" , src: '/about/burger.png', alt:"byuq"} ,{id:3 , name:"Burgeqr" , src: '/about/burger.png', alt:"byeu"} ,{id:4 , name:"Burgeqr" , src: '/about/burger.png', alt:"byeDu"}] },
-  
-   ];
+      items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bnyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byuq"} ,{id:3 ,price:30, name:"Burgqer" , src: '/about/burger.png', alt:"byeu"} ,{id:4 ,price:40, name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
+ ];
 
 
   return (
@@ -71,7 +64,7 @@ export default function Menu() {
             
              <div style={{backgroundImage:`url(${im.src})`}} className={styles.img}></div>
              <p className={styles.name}>{im.name}</p>
-           
+             <p className={styles.price}>{im.price}$</p>
            </Link>
           </SwiperSlide>
           )}

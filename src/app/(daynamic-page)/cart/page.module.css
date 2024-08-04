@@ -2,6 +2,14 @@
 width: 90%;
 margin:40px auto;
 color: var(--red);
+.empty{
+    font-size: 35px;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    color: var(--orange);
+}
 .yourcart{
     display: flex;
     flex-wrap: wrap;
@@ -10,11 +18,11 @@ color: var(--red);
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        max-height: 478px;
+        max-height: 475px;
         overflow-y: auto;
         direction: rtl;
         .item{
-            padding: 14px 10px;
+            padding: 13.7px 10px;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -40,7 +48,7 @@ color: var(--red);
                 flex-direction: column;
                 gap: 10px;
                 color: var(--red);
-                max-width: 400px;
+                width: 400px;
                 .name{
                     font-size: 25px;
                 }
@@ -80,6 +88,7 @@ color: var(--red);
             }
 
         }
+
 
     }
     .myitems::-webkit-scrollbar {
@@ -251,6 +260,7 @@ color: var(--red);
     .cart{
         width: 85%;
         margin-bottom: 60px;
+
         .yourcart{
             display: flex;
             flex-direction: column;
@@ -273,7 +283,7 @@ color: var(--red);
         
                     }
                 }
-        
+
             }
             .details{
                 width: auto;
@@ -297,6 +307,9 @@ color: var(--red);
 @media (max-width:880px) {
     .cart{
         width: 90%;
+        .empty{
+            font-size: 32px;
+        }
         .yourcart{
             .myitems{
 
@@ -381,7 +394,9 @@ color: var(--red);
 @media (max-width:655px){
     .cart{
         width: 90%;
-
+        .empty{
+            font-size: 26px;
+        }
         .yourcart{
             flex-wrap: nowrap;
             .myitems{
@@ -456,8 +471,7 @@ color: var(--red);
 
         }
         
-        }
-        
+        }    
 @media (max-width:400px){
             .cart{
                 width: 93%;

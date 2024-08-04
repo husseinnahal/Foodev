@@ -1,8 +1,12 @@
+"use client"
 import Link from 'next/link'
 import Styles from './page.module.css'
-
+import { Usecontextcart } from '@/context/cartecontext'
 
 export default function Checkout() {
+  const {cart} = Usecontextcart(); 
+
+
   return (
     <div className={Styles.checkout}>
         
@@ -12,8 +16,12 @@ export default function Checkout() {
         </div> */}
 
         <Link href={"/cart"} className={Styles.tocart}>
-        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14.25" viewBox="0 0 448 512"><path fill="#FF8F4C" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14.25" viewBox="0 0 448 512"><path className={Styles.svg} fill="#FF8F4C" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
           go to cart</Link>
+
+
+      {cart.length===0 ?
+      <p className={Styles.empty}>Your cart is emty</p> :
 
       <div className={Styles.order}> 
        
@@ -66,7 +74,7 @@ export default function Checkout() {
         </div>
 
       </div> 
-
+      }
 
     </div>
   )

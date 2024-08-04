@@ -2,28 +2,41 @@
 import Link from "next/link"
 import Style from "./page.module.css"
 import Burgers from "@/../public/about/mshawi.png"
-import { useState } from "react"
 import { Usecontextcart } from "@/context/cartecontext";
 
 
 export default function Cart() {
 
-const {open,setOpen} = Usecontextcart(); 
+const {setOpen,cart,subtotal} = Usecontextcart(); 
 function close(){
   setOpen(-420);
-  
  }
 
- const items=[
-  {id:1,name:"Burger Buregr",price:15},
-  {id:2,name:"Burger ",price:10},
-  {id:3,name:"pizza Buregr",price:20}
- ]
 
 
-function Item({ item }) {
-  const [quantity,setQuantity]=useState(1)
 
+
+function Item({ cart }) {
+
+  const {setCart,removeFromCart} = Usecontextcart(); 
+
+
+  function decrease(id) {
+    setCart(prevItems =>
+      prevItems.map(item =>
+        item.id === id && item.quantiti > 1
+          ? { ...item, quantiti: item.quantiti - 1 }
+          : item
+      )
+    );
+  }
+  function increase(id) {
+    setCart(prevItems =>
+      prevItems.map(item =>
+        item.id === id ? { ...item, quantiti: item.quantiti + 1 } :item
+      )
+    );
+  }
 
   return (
     <div className={Style.item} >
@@ -32,26 +45,25 @@ function Item({ item }) {
 
     <div className={Style.information}>
 
-        <h1 className={Style.name}>{item.name}</h1>
+        <h1 className={Style.name}>{cart.name}</h1>
 
         <details>
           <summary className={Style.summary}> removed ingredients: </summary> 
-          <p className={Style.customise}>burger, burger, burger, eeeeeeeeeeeeeeeeee eeeeeeeeeeeeee eeeeburger, burger, f</p>
+          <p className={Style.customise}>{cart.custimize}</p>
         </details>
 
-        <p className={Style.price}>{item.price}$</p>
+        <p className={Style.price}>{cart.price}$</p>
 
     </div>
 
     <div className={Style.quantity}>
-      <p className={Style.plus} onClick={()=>quantity!=1 && setQuantity(quantity-1)}>-</p>
-      <p className={Style.nb}>{quantity}</p>
-      <p className={Style.plus} onClick={()=> setQuantity(quantity+1)}>+</p>
+      <p className={Style.plus} onClick={()=> decrease(cart.id)}>-</p>
+      <p className={Style.nb}>{cart.quantiti}</p>
+      <p className={Style.plus} onClick={()=> increase(cart.id)}>+</p>
     </div>
 
     <div className={Style.editing}>
-        <p>x</p>
-        <svg xmlns="http://www.w3.org/2000/svg" height="18" width="18" viewBox="0 0 512 512"><path fill="#FF8F4C" d="M362.7 19.3L314.3 67.7 444.3 197.7l48.4-48.4c25-25 25-65.5 0-90.5L453.3 19.3c-25-25-65.5-25-90.5 0zm-71 71L58.6 323.5c-10.4 10.4-18 23.3-22.2 37.4L1 481.2C-1.5 489.7 .8 498.8 7 505s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L421.7 220.3 291.7 90.3z"/></svg>
+        <p onClick={() => removeFromCart(cart.id)}>x</p>
     </div>
 
     </div>
@@ -63,41 +75,44 @@ function Item({ item }) {
 
       <h1> YOUR CART</h1>
 
-      <div className={Style.yourcart}>
+          {cart.length === 0 ? 
+           <p className={Style.empty}>Your cart is empty</p> :
+            <div className={Style.yourcart}>
 
-        <div className={Style.myitems}>
-          {items.map((it)=>
-          <Item key={it.id} item={it} />
-          )}
+              <div className={Style.myitems}>
+                
+                {cart.map((cart)=>
+                <Item key={cart.id} cart={cart} />
+                )}
+                
+              </div>
 
-        </div>
 
+              <div className={Style.details}>
 
-        <div className={Style.details}>
+                <h1 className={Style.summary}>Order Summary</h1>
 
-          <h1 className={Style.summary}>Order Summary</h1>
+                <div className={Style.total}>
+                  <h2 className={Style.titles}>Subtotal</h2>
+                  <p className={Style.price}>{subtotal}$</p>
+                </div>
 
-          <div className={Style.total}>
-            <h2 className={Style.titles}>Subtotal</h2>
-            <p className={Style.price}>150$</p>
-          </div>
+                <div className={Style.total}>
+                  <h2 className={Style.titles}>Delivery</h2>
+                  <p className={Style.price}>3$</p>
+                </div>
 
-          <div className={Style.total}>
-            <h2 className={Style.titles}>Delivery</h2>
-            <p className={Style.price}>3$</p>
-          </div>
+                <div className={Style.total}>
+                  <h2 className={Style.titles}>Total</h2>
+                  <p className={Style.price}>{subtotal+3}$</p>
+                </div>
 
-          <div className={Style.total}>
-            <h2 className={Style.titles}>Total</h2>
-            <p className={Style.price}>150$</p>
-          </div>
+                <Link href="/checkout" className={Style.chekcout} onClick={close}>CHECKOUT</Link>
 
-          <Link href="/checkout" className={Style.chekcout} onClick={close}>CHECKOUT</Link>
+              </div>
 
-        </div>
-
-      </div>
-
+            </div>
+     }
     </div>
   )
 }
