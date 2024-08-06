@@ -73,7 +73,11 @@ function close(){
       <h1> YOUR CART</h1>
 
           {cart.length === 0 ? 
-           <p className={Style.empty}>Your cart is empty</p> :
+           <div className={Style.emptycart}>
+           <p className={Style.empty}>Your cart is empty</p> 
+           <Link href={"/menu"} className={Style.tomenu}>Go To Menu </Link>
+           </div>
+           :
             <div className={Style.yourcart}>
 
               <div className={Style.myitems}>

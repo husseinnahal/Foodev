@@ -49,14 +49,15 @@ export default function Offers({ params }) {
           </div>
         </div>
         <div className={styles.circle}>
-          <Image 
+          {/* <Image 
             src={offer.img} 
             width={440} 
             height={440} 
             alt={offer.alt} 
             className={`${styles.img} ${animationClass}`} 
             priority 
-          />
+          /> */}
+               <div  className={`${styles.img} ${animationClass}`}   style={{backgroundImage:`url(${offer.img})`}}></div>
         </div>
       </div>
       <Offer />

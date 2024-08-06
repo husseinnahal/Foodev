@@ -21,7 +21,13 @@ export default function Checkout() {
 
 
       {cart.length===0 ?
-      <p className={Styles.empty}>Your cart is emty</p> :
+
+      <div className={Styles.emptycart}>
+        <p className={Styles.empty}>Your cart is emty</p> 
+        <Link href={"/menu"} className={Styles.tomenu}>Go To Menu</Link>
+      </div>
+
+      :
 
       <div className={Styles.order}> 
        

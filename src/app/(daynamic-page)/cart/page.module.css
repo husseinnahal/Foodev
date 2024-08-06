@@ -4,13 +4,29 @@ margin:40px auto;
 color: var(--red);
 }
 
-.empty{
-    font-size: 35px;
+.emptycart{
     display: flex;
     height: 50vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 30px;
+}
+.empty{
+    font-size: 35px;
     color: var(--orange);
+}
+.tomenu{
+    background-color: var(--orange);
+    color: var(--lightorange);
+    padding: 10px 20px ;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.tomenu:hover{
+  background-color: var(--red);
 }
 
 .yourcart{
