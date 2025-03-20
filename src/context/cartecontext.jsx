@@ -31,6 +31,8 @@ export default function Cartecontext({ children }) {
   }
 
   
+
+  
   function removeFromCart(itemId){
     setCart((prevCart) => prevCart.filter(product => product.id !== itemId));
   };

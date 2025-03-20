@@ -1,7 +1,7 @@
 "use client"
 import Styles from "./page.module.css";
-import Link from "next/link";
 import Batat from "@/../public/off3.png"
+import Gril from "@/../public/about/mshawi.png"
 import Upper from "@/../public/upper.png"
 import Lahme from "@/../public/lahme.png"
 import Down from "@/../public/5beztahet.png"
@@ -48,11 +48,11 @@ const sections = [
 ];
 
 const items = [
-  { id: 1, name: 'Double Cheeseburger', description: 'Lorem 1 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f" , price: 10 , quantiti: 1,type:"normal" },
-  { id: 2, name: 'Burger  Burger', description: 'Lorem 2 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 20 , quantiti: 1,type:"withanimation"  },
-  { id: 3, name: 'Burger burger', description: 'Lorem 3 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 30 , quantiti: 1,type:"withoutanimation" },
+  { id: 1, name: 'Burger', description: 'Lorem 1 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f" , price: 10 , quantiti: 1,type:"withanimation" },
+  { id: 2, name: 'pizza', description: 'Lorem 2 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 50 , quantiti: 1,type:"withoutanimation"  },
+  { id: 3, name: 'Grill', description: 'Lorem 3 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 30 , quantiti: 1,type:"normal" },
   { id: 4, name: 'Burger ', description: 'Lorem 4 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 40 , quantiti: 1,type:"withanimation" },
-  { id: 5, name: 'Burger', description: 'Lorem 5 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 50 , quantiti: 1,type:"withoutanimation"  },
+  { id: 5, name: 'pizza', description: 'Lorem 5 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 50 , quantiti: 1,type:"withoutanimation"  },
   { id: 6, name: 'Burger', description: 'Lorem 5 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 50 , quantiti: 1,type:"normal" },
   { id: 7, name: 'Burger', description: 'Lorem 5 ipsum, dolor sit amet consectetur adipisicing.',custimize: "burger, burger, burger, burger, burger, f", price: 50 , quantiti: 1, type:"withanimation"},
 ];
@@ -110,7 +110,7 @@ useEffect(()=>{
         <div className={Styles.item}>
           
           <div className={Styles.circle}>
-              <div style={{ backgroundImage: `url(${Batat.src})`}} className={Styles.img}></div>
+              <div style={{ backgroundImage: `url(${Gril.src})`}} className={Styles.img}></div>
           </div>
     
           <div className={Styles.information}>
@@ -138,7 +138,7 @@ useEffect(()=>{
      ): 
       item.type === "withoutanimation" ?
         
-                <div className={Styles.withoutAnimation}>
+      <div className={Styles.withoutAnimation}>
             
                   <div className={Styles.circle}>
                   <div style={{ backgroundImage: `url(${Batat.src})`}} className={Styles.img}></div>
@@ -196,7 +196,7 @@ useEffect(()=>{
             
                   </div>
             
-               </div>
+      </div>
         
       
        :

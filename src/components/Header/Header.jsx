@@ -4,7 +4,7 @@ const mer = Merienda({ subsets: ["latin"],weight: "700"});
 import styles from "@/app/page.module.css";
 import Link from "next/link";
 import Image from "next/image"
-import { useRef, useState } from "react";
+import { useRef} from "react";
 import { Usecontextcart } from "@/context/cartecontext";
 import Logo from "@/../public/logo.png"
 import { usePathname } from "next/navigation";

@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Style from "./page.module.css"
-import Burgers from "@/../public/about/mshawi.png"
+import Burgers from "@/../public/about/burger.png"
 import { Usecontextcart } from "@/context/cartecontext";
 
 function Item({ cart }) {

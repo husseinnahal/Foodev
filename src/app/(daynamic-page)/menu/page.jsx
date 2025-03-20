@@ -12,15 +12,15 @@ import Link from "next/link";
 export default function Menu() {
   const item = [
 
-    { id: 0,  name:"Burger"    ,
-       items:[{id:1 ,price:10, name:"Burger burgere butger" , src: '/off4.png', alt:"byu"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/off4.png', alt:"byeu"},{id:2 ,price:20, name:"Burgers" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgeqr" , src: '/about/burger.png', alt:"byeu"} ,{id:4 ,price:40, name:"Burgeqr" , src: '/about/burger.png', alt:"byFeu"}] },
     { id: 1,name:"Burger" , 
-       items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bjyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgeqr" , src: '/about/burger.png', alt:"bu"}   ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
+       items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bjyu"},{id:2 ,price:20, name:"Burgser" , src: '/offer.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgeqr" , src: '/off2.png', alt:"bu"}   ,{id:5 ,price:50, name:"Burgeqr" , src: '/burger.png', alt:"byDeu"},{id:5 ,price:50, name:"big Burgeqr" , src: '/off5.png', alt:"byDeu"}]  },
+    { id: 0,  name:"Pizza"    ,
+       items:[{id:1 ,price:10, name:"large pizza" , src: '/off4.png', alt:"byu"} ,{id:5 ,price:50, name:"pizza" , src: '/off3.png', alt:"byeu"},{id:2 ,price:20, name:"small pizza" , src: '/about/pizza.png', alt:"byqu"} ,{id:3 ,price:10, name:"large pizza" , src: '/off4.png', alt:"byu"},{id:4 ,price:15, name:"pizza" , src: '/off3.png', alt:"byu"}] },
     { id: 2,  name: "Starters" ,
-       items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bkyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgqer" , src: '/about/burger.png', alt:"byue"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byCeu"}]  },
-    { id: 3,  name: "Sandwitch", 
-      items:[{id:1 ,price:10, name:"Burger" , src: '/about/burger.png', alt:"bnyu"},{id:2 ,price:20, name:"Burgser" , src: '/about/burger.png', alt:"byuq"} ,{id:3 ,price:30, name:"Burgqer" , src: '/about/burger.png', alt:"byeu"} ,{id:4 ,price:40, name:"Burgeqr" , src: '/about/burger.png', alt:"byDeu"}]  },
- ];
+       items:[{id:1 ,price:10, name:"sitos" , src: '/about/btata.png', alt:"bkyu"},{id:2 ,price:20, name:"fahita" , src: '/about/sandwitch.png', alt:"byqu"} ,{id:3 ,price:30, name:"Grill" , src: '/about/mshawi.png', alt:"byue"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byCeu"}]  },
+       { id:3 ,  name: "Sandwiches" ,
+        items:[{id:1 ,price:10, name:"sitos" , src: '/about/btata.png', alt:"bkyu"},{id:2 ,price:20, name:"fahita" , src: '/about/sandwitch.png', alt:"byqu"} ,{id:3 ,price:30, name:"Burgqer" , src: '/about/mshawi.png', alt:"byue"} ,{id:5 ,price:50, name:"Burgeqr" , src: '/about/burger.png', alt:"byCeu"}]  },
+     ];
 
 
   return (

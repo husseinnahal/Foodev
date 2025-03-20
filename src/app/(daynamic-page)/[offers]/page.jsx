@@ -1,6 +1,5 @@
 "use client"
 import styles from './page.module.css'
-import Image from 'next/image';
 import Link from 'next/link';
 import Offer from './offer/page';
 import { Usecontextoffer } from '@/context/offercontext';
@@ -49,14 +48,6 @@ export default function Offers({ params }) {
           </div>
         </div>
         <div className={styles.circle}>
-          {/* <Image 
-            src={offer.img} 
-            width={440} 
-            height={440} 
-            alt={offer.alt} 
-            className={`${styles.img} ${animationClass}`} 
-            priority 
-          /> */}
                <div  className={`${styles.img} ${animationClass}`}   style={{backgroundImage:`url(${offer.img})`}}></div>
         </div>
       </div>

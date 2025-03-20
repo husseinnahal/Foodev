@@ -39,7 +39,7 @@
             font-weight: 700;
             text-decoration: none;
             padding: 20px;
-            width: 171px;
+            width: 175px;
             transition: 0.5s;
            }
       
@@ -105,7 +105,7 @@
           flex-wrap: wrap ;
           height: 100%;
           gap: 40px;
-      
+
          .box{
           background-color: #fd7222;
           color: var(--lightorange);
@@ -119,6 +119,8 @@
           border-radius: 11px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           transition: 0.5s;
+
+
           .title{
             font-size: 21px;
           }
@@ -157,7 +159,6 @@
         }
       
        }
-      
       
        .about{
         display: flex;
@@ -256,7 +257,7 @@
             font-weight: 700;
             text-decoration: none;
             padding:20px;
-            width: 169px;
+            width: 175px;
             margin-top: 20px;
             transition: 0.5s;
            }
@@ -378,6 +379,7 @@
 
   }
 }
+
 
 @media screen and (max-width: 1410px) {
   
@@ -688,7 +690,6 @@
    
 }
 }
-
 @media screen and (max-width: 625px){
   .landing{
     .about{
@@ -807,7 +808,6 @@
 
   }
 }
-
 @media screen and (max-width: 400px){
   .landing{
 

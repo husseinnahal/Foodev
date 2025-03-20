@@ -9,10 +9,8 @@ import Food from "@/../public/menu/food.png"
 export default function Category() {
   
   const category = [
-
-    { id: 0, src: '/footer/Logo.png', alt: 'all', name:"All" },
-    { id: 1, src: '/footer/Logo.png', alt: 'burger', name:"Burger" },
-    { id: 2, src: '/footer/Logo.png', alt: 'drink', name: "Starters" },
+    { id: 1, src: '/footer/Logo.png', alt: 'burger', name:"pizza" },
+    { id: 2, src: '/footer/Logo.png', alt: 'drink', name: "Burgers" },
     { id: 3, src: '/footer/Logo.png', alt: 'sand', name: "beef burger" },
     { id: 4, src: '/footer/Logo.png', alt: 'starters' , name: "salad" },
     { id: 5, src: '/footer/Logo.png', alt: 'batata', name: "chiken burger" },
